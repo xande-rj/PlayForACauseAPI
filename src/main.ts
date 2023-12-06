@@ -4,6 +4,7 @@ import { MySocketModule } from './app/socket/socket.module';
 import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.interface';
 import { IoAdapter } from '@nestjs/platform-socket.io';
 
+const port = process.env.PORT
 
 async function bootstrap() {
   const app = await NestFactory.create(UsuariosModule);
@@ -13,7 +14,7 @@ async function bootstrap() {
         allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos permitidos
       };
     app.enableCors(corsOptions);
-  await app.listen(3000);
+  await app.listen(port);
 
 }
 
