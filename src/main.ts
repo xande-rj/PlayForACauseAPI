@@ -13,7 +13,7 @@ async function bootstrap() {
         allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos permitidos
       };
     app.enableCors(corsOptions);
-  await app.listen(3001);
+  await app.listen(3000);
 
 }
 
